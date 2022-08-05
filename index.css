@@ -29,17 +29,29 @@ border-radius: 10px;
 background: var(--gray);
 border-radius: 10px;
 } */
-
+@font-face {font-family:"COCOGOOSE";src:url("/asset/font/Cocogoose_trial.eot") format("eot"),url("/asset/font/Cocogoose_trial.woff") format("woff"),url("/asset/font/Cocogoose_trial.ttf") format("truetype"),url("/asset/font/Cocogoose_trial.svg") format("svg");font-weight:normal;font-style:normal;}
 *{
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
     position: relative;
+    font-family:'COCOGOOSE';
 }
 div{
     display: block;
 }
 
+/* Donate */
+#donate{
+    height: 56px; color: white;
+    width: 180px;
+    position: fixed;
+    bottom: 1rem;
+    right: 1.5rem;
+    z-index: 99999;
+    box-shadow: 2px 10px 10px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
 
 /* Header */
 header{
@@ -72,7 +84,6 @@ header ul {
 }
 header ul > li {
     display: grid;
-    padding: 0.5rem;
 }
 .navbar-nav{
     flex-direction: row !important;
@@ -102,7 +113,7 @@ header a:hover {
 .dropbtn{
     background-color: transparent;
     border: none;
-    padding: 4px;
+    padding: 0.4rem;
     border: none;
     display: flex; 
 }
@@ -123,12 +134,59 @@ header a:hover {
     display: block;
 }
 .dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {
-    background-color: #ddd; color: var(--red);
+.dropdown:hover .dropdown-content {
+    display: block; perspective: 1000px;
 }
-.list-item:hover+.list-item:checked .mydropdown-menu{
-    display: block;
+.dropdown:hover .dropbtn{
+    background-color: transparent; color: var(--red);
+}
+.dropdown:hover .dropbtn{
+    color: red;
+}
+.dropdown:hover .dropdown-content a{
+    transform-origin: top center;
+    opacity: 0;
+}
+.dropdown:hover .dropdown-content a:nth-child(1){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: -150ms;
+}
+.dropdown:hover .dropdown-content a:nth-child(2){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 0ms;
+}
+.dropdown:hover .dropdown-content a:nth-child(3){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 150ms;
+}
+.dropdown:hover .dropdown-content a:nth-child(4){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 300ms;
+}
+.dropdown:hover .dropdown-content a:nth-child(5){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 450ms;
+}
+.dropdown:hover .dropdown-content a:nth-child(6){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 600ms;
+}
+.dropdown:hover .dropdown-content a:nth-child(7){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 750ms;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+    50%{
+        transform: rotateX(20deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
 }
 #nav-toggle-label {
     display: none;
@@ -141,7 +199,7 @@ header a:hover {
     to {right: 0; top: 0;}
 }
 
-@media screen and (max-width: 933px) {
+@media screen and (max-width: 1078px) {
     header {
         justify-content: space-between;
         align-items: center;
@@ -227,6 +285,10 @@ header a:hover {
     .navbar-nav{
         flex-direction: column !important;
     }
+    .dropdown:hover .dropdown-content {
+        display: block; background-color: transparent;
+        position: relative;
+    }
 }
 @media screen and (max-width: 468px){
     .pos .btn{
@@ -271,7 +333,6 @@ span.support{
 /* CoverImage */
 
 .coverImage{
-    background-image: url(./img/Hompage/Home-Header-Edit.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -294,7 +355,6 @@ span.support{
     overflow-wrap: break-word; 
 }
 .triangle-title{
-    font-family: "CocogoosePro", sans-serif;
     color: #26428E;
     font-size: 31px; font-weight: 750; text-transform: uppercase;
     line-height: 2.25rem; bottom: 8px;
@@ -315,13 +375,16 @@ span.support{
 }
 @media screen and (max-width: 768px){
     .triangle{
-        width: 100%;
+        width: 100%; height: 100%;
     }
     .triangle-title{
-        bottom: 0px; font-size: 150%; max-width: 175px;
+        bottom: 0px; font-size: 150%;
     }
     .triangle-content{
-        left: 48%;
+        left: 45%;
+    }
+    .triangle-bgr, .triangle-bgr-border{
+        width: 55%; left: 15%;
     }
 }
 /* Intro */
@@ -333,7 +396,7 @@ span.support{
     margin-bottom: 15px; width: 100%;
 }
 .intro-title{
-    font-family: "CocogoosePro", sans-serif; font-size: 28px; font-weight: bold;
+    font-family: "Cocogoose", sans-serif; font-size: 28px; font-weight: bold;
     line-height: 2.25rem; padding: 0; margin: 0; overflow-wrap: break-word;
 }
 
@@ -341,11 +404,11 @@ span.support{
 .boxalign {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    gap: 0.1rem;
     justify-self: center;
 }
 .boxpos {
-    margin: 8px; width: 100%;
+    width: 100%;
     display: flex; justify-content: flex-start;
     flex-direction: column;
 }
@@ -371,10 +434,10 @@ span.support{
     padding: 20px; height: auto !important; color: white;
 }
 .infobox-title{
-    overflow-wrap: break-word; 
+    overflow-wrap: break-word;
 }
 .infobox-content{
-    margin: 0; padding-bottom: 15px;
+    margin: 0; padding-bottom: 15px; font-family: 'CocogoosePro';
 }
 
 /* Change Maker */
@@ -489,8 +552,8 @@ span.support{
     display: block;
 }
 .volunteer-title{
-    margin: 0 0 15px; font-family: "CocogoosePro", Sans-serif;
-    font-size: 40px; font-weight: 700; line-height: 42px; overflow-wrap: break-word;
+    margin: 0 0 15px; font-family: "Cocogoose", Sans-serif;
+    font-size: 38px; font-weight: 500; line-height: 42px; overflow-wrap: break-word;
     color: #26428E; z-index: 0;
 }
 .volunteer-triangle-bgr{
@@ -502,7 +565,7 @@ span.support{
 
 @media screen and (max-width: 768px){
     .volunteer .volunteer-sort{
-        flex-flow: column;
+        flex-flow: column !important;
     }
     .volunteer-img{
         width: 100%;
@@ -551,6 +614,7 @@ footer a, footer p{
     color: white;
     font-size: larger;
     overflow-wrap: break-word;
+    font-family: "CocogoosePro";
 }
 
 .new_footer_top {
@@ -630,7 +694,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 .new_footer_top .f-title {
     margin-top: 20px;
     margin-bottom: 20px;
-    color: black;
+    color: #FFAA00;
     font-size: x-large;
 }
 .f_600 {
@@ -638,7 +702,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 .footer_bottom .container .row{
     align-items: center;
-    justify-content:flex-end;
+    justify-content: space-between;
 }
 @media screen and (max-width: 768px){
     .footer_bottom .container .row{
@@ -648,14 +712,3 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 /*************footer End*****************/
 
-/* Donate */
-#donate{
-    height: 56px; color: white;
-    width: 180px;
-    position: fixed;
-    bottom: 1rem;
-    right: 1.5rem;
-    z-index: 99999;
-    box-shadow: 2px 10px 10px rgba(0,0,0,0.1);
-    border-radius: 15px;
-}
