@@ -8,6 +8,7 @@
     --prime2: #26428E;
     --prime3: #5CB55D;
     --prime4: #FFAA00;
+    --white: #ffffff;
 }
 
 /* ----------------------------------------------------------
@@ -29,6 +30,9 @@ border-radius: 10px;
 background: var(--gray);
 border-radius: 10px;
 } */
+
+
+
 
 *{
     margin: 0; 
