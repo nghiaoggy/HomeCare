@@ -67,3 +67,17 @@ function showSuggestions(list){
     }
     suggBox.innerHTML = listData;
 }
+
+function validate() {
+    var username = document.getElementById("Username");
+    var password = document.getElementById("Password");
+    var btnSubmit = document.getElementById("login");
+    var avatar = document.getElementById("user");
+
+    if (username.value == "admin" && password.value == "admin") {
+        btnSubmit.classList.add("d-none");
+        avatar.classList.remove("d-none");
+    } else {
+        alert("Wrong username or password");
+    }
+}
