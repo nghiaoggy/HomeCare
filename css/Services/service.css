@@ -11,7 +11,6 @@ body {
     position: relative;
     min-height: 619px;
     width: 100%;
-    background-image: url("../asset/img/cover1.jpg");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: cover;
