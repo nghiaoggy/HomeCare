@@ -325,6 +325,10 @@ body {
               animation-timing-function: ease-out;
     }
   }
+
+#video h2{
+    color: var(--prime3);
+} 
   
 
 
