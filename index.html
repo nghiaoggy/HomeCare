@@ -26,14 +26,13 @@
 <body>
     <!-- Donate -->
     <div id="donate" class="m-0 p-0 d-flex justify-content-center align-items-center btn" data-bs-toggle="modal"
-        data-bs-target="#donateModal" style="background-color: #FFAA00;">
-        <i class="fa-solid fa-heart fa-xl me-3"></i>
-        <h5 class="text-uppercase d-flex align-items-center p-0 m-0" style="color: #FFFFFF; font-size: 1.5rem;">Donate
-        </h5>
+        style="background-color: #FFAA00;" data-bs-target="#donateModal">
+        <a class="text-uppercase text-decoration-none" style="color: #FFFFFF;" data-bs-toggle="modal"><span><i
+                    class="fa-solid fa-heart fa-xl me-3"></i></span>Donate
+        </a>
     </div>
 
-    <div id="donateModal" class="modal m-0 p-0" role="dialog" aria-hidden="true" tabindex="-1"
-        data-bs-backdrop="static">
+    <div id="donateModal" class="modal m-0 p-0">
         <div class="modal-dialog modal-lg modal-dialog-centered text-black">
             <div class="modal-content">
                 <form action="">
@@ -58,11 +57,8 @@
                                                     class="fa-solid fa-circle-question me-1"></i></span> Help Center</a>
                                     </li>
                                 </ul>
-
-                                <a class="text-secondary" data-bs-toggle="modal" data-bs-target="#loginModal">Login/Register</a>
+                                <a class="text-secondary" data-bs-toggle="modal" href="#loginModal">Login/Register</a>
                             </div>
-
-
                         </div>
 
                     </div>
@@ -76,8 +72,7 @@
         </div>
     </div>
 
-
-    <div id="loginModal" class="modal m-0 p-0" role="dialog" aria-hidden="true" tabindex="-1" data-bs-backdrop="static">
+    <div id="loginModal" class="modal m-0 p-0" data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered text-black">
             <div class="modal-content p-1 p-lg-3">
                 <form action="">
@@ -175,12 +170,12 @@
                             </div>
                         </li>
                         <li>
-                            <button class="dropbtn"><a href="./component/contact.html" class="p-0">
+                            <button class="dropbtn"><a href="/component/volunteer/volunteer.html" class="p-0">
                                     <h5>Volunteer</h5>
                                 </a></button>
                         </li>
                         <li>
-                            <button class="dropbtn" h><a href="./component/contact.html" class="p-0">
+                            <button class="dropbtn" h><a href="/component/contact.html" class="p-0">
                                     <h5>Contact</h5>
                                 </a></button>
                         </li>
@@ -189,9 +184,9 @@
                                 <h5>Give</h5><i class="fa-solid fa-caret-down"></i>
                             </button>
                             <div class="dropdown-content">
-                                <a href="#">Give</a>
-                                <a href="#">Gifts & Wills</a>
-                                <a href="#">Monthly Giving</a>
+                                <a href="/component/give/give.html">Give</a>
+                                <a href="/component/give/gifts&wills.html">Gifts & Wills</a>
+                                <a href="/component/give/monthlygiving.html">Monthly Giving</a>
                             </div>
                         </li>
                     </ul>
