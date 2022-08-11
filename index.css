@@ -119,7 +119,7 @@ header ul {
     grid-template-rows: 1fr;
     margin-bottom: 0!important;
     list-style-type: none;
-}
+}~
 header ul > li {
     display: grid;
 }
